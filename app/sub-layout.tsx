@@ -12,16 +12,12 @@ import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { polygonMumbai, polygon } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
+import { publicProvider } from "wagmi/providers/public";
 
 export const App = ({ children }: { children: React.ReactNode }) => {
   const { chains, publicClient } = configureChains(
     [polygon, polygonMumbai],
-    [
-      alchemyProvider({ apiKey: process.env.ALCHEMY_ID as string }),
-      jsonRpcProvider({
-        rpc: (chain) => ({ http: chain.rpcUrls.default.http[0] }),
-      }),
-    ]
+    [publicProvider()]
   );
 
   const { connectors } = getDefaultWallets({
