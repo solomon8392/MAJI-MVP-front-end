@@ -226,13 +226,130 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center overflow-hidden">
-          <div className="absolute bg-[#21253a] w-full h-[30%] overflow-hidden rounded-t-lg">
+          <div className="bg-[#21253a] absolute w-full h-[60rem] relative overflow-hidden rounded-[90px]">
 
-          <section className="relative ">
-                        <div className="absolute bg-[#39468e] justify-center flex items-center blur-[140px] top-[1px] right-0 left-0 w-[249px] z-0 h-[409px] opacity-[99vh]">
+          
+          <div className="flex flex-col justify-center items-center text-center">
+                      <div className="py-[20px]">
+                        <h1 className="text-center lg:text-[90px] text-[#FFFFFF] font-extrabold md:text-[42px] text-[30px] font-firaCode"> Made for your <br /> needs.</h1>
+                      </div>
+
+
+                      <section className="relative ">
+                        <div className="absolute bg-[#39468e] justify-center flex items-center blur-[120px] top-[40%] right-0 left-0 w-[229px] z-0 h-[409px] opacity-[99vh]">
                           <div className="relative z-10 item-center"></div>
                         </div>
                       </section>
+
+                        <div className="grid gap-[20px]">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-9">
+
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[40vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icons1A.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Streamlined buyer experience</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Enable customers to subscribe with <br /> crypto in as few as 3 clicks</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[40vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icon1B.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Highly customizable design</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Match your checkout to your <br /> brand colors, typography, & <br /> more</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[40vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icon3A.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Easy to integrate</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Implement your Subscription Checkout <br /> starting with just a few lines of code</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[40vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icon4C.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Simple Accounting</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Easily retrieve and export granular <br /> stream data as .csv</h4>
+                          </div>
+                        </div>
+                      </div>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-9">
+
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[35vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icons1A.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Highly customizable design</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Match your checkout to your <br /> brand colors, typography, & <br /> more</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[35vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icons1A.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Highly customizable design</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Match your checkout to your <br /> brand colors, typography, & <br /> more</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[35vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icons1A.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Highly customizable design</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Match your checkout to your <br /> brand colors, typography, & <br /> more</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-[2px] border-[#47559d] w-[45vh] h-[35vh] flex justify-center items-center rounded-3xl">
+                        <div className="text-center items-center gap-[10px]">
+                            <div className="flex justify-center items-center">
+                          <Image src={require("../../../public/svg/icons1A.svg")} className="flex items-center justify-center" alt="" />
+                            </div>
+                          <div className="py-2">
+                            <h1 className="text-[16px] text-[#FFFFFF] font-extrabold font-popPins">Highly customizable design</h1>
+                            <h4 className="text-[14px] py-4 font-popPins font-bold text-[#FFFFFF]">Match your checkout to your <br /> brand colors, typography, & <br /> more</h4>
+                          </div>
+                        </div>
+                      </div>
+                          </div>
+                        </div>
+
+
+
+
+          </div>
+
+
+              <div className="">
+                <div> 
+                  <h1 className="text-center lg:text-[50px] text-[#2e3a47] font-bold md:text-[42px] text-[30px] font-firaCode">Developer-friendly integration.</h1>
+                  <h4 className="font-popPins text-[30px] text-center]">Developer-friendly integration.</h4>
+                </div>
+              </div>
           </div>
           </div>
 
