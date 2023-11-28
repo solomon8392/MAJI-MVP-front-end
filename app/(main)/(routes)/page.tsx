@@ -137,7 +137,7 @@ export default function Home() {
         </div>
           </div>
 
-        <div className="py-[10vh] bg-[#004481] w-full">
+        <div className="py-[10vh] bg-[#004481] w-full flex justify-center items-center">
           <div className="rounded-3xl h-[100%] border-none w-[90%] lg:px-8 md:px-5 px-4 p-5 bg-[#043263]">
             <div className="gap-[30vh]">
               <h1 className="lg:text-[36px] md:text-[27px] text-[22px] text-[#FFFFFF] font-firaCode font-bold text-center">
