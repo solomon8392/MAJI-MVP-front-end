@@ -35,10 +35,10 @@ export default function Home() {
         />
       </Head> */}
 
-      <div className="lg:px-8 md:px-5 px-4 bg-[#FFFFFF]">
-        <div className="flex flex-col lg:flex-row md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-around">
+      <div className="g-[#FFFFFF]">
+        <div className="flex flex-col lg:flex-row bg-[#EAF9FA] w-full  md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-around">
           <div className="">
-            <h4 className="text-[#000000] py-5 lg:text-[22px] md:text-[20px] text-[18px] font-popPins">
+            <h4 className="text-[#0F76CA] py-5 lg:text-[22px] md:text-[20px] text-[18px] font-popPins">
               Accelerate revenue
             </h4>
             <h1 className="lg:text-[36px] md:text-[33px] text-[18px] font-firaCode font-bold">
@@ -57,17 +57,17 @@ export default function Home() {
             </button>
           </div>
           <div className="lg:w-[537px] md:w-[437px] lg:h-[537px] md:h-[437px] items-center flex">
-            <Image src={require("../../../public/png/heroA1.png")} alt="" />
+            <Image src={require("../../../public/png/img1.png")} alt="" />
           </div>
         </div>
-
+        <div className="lg:px-8 md:px-5 px-4">          
         <div className="py-9 overflow-hidden">
-          <h1 className="lg:text-[36px] md:text-[27px] text-[22px] font-firaCode font-bold text-center">
+          <h1 className="lg:text-[36px] md:text-[27px] text-[22px] font-firaCode text-[#072146] font-bold text-center">
             Build your subscription checkout in 3 easy steps
           </h1>
           <div className="border-t-2 border-b-2 border-[#000000] flex flex-col lg:flex-row ">
             <div className="m-4">
-              <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#000000] font-bold">
+              <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#145387] font-bold">
                 Customize widget
               </h1>
               <h4 className="text-[#000000] lg:text-[18px] md:text-[18px] py-5 text-[14px] font-popPins">
@@ -75,12 +75,12 @@ export default function Home() {
                 styles.
               </h4>
               <div className="lg:w-[364px] lg:h-[316px] md:w-[264px] w-[223px]">
-                <Image src={require("../../../public/png/code3.png")} alt="" />
+                <Image src={require("../../../public/png/img2.png")} alt="" />
               </div>
             </div>
             <div className=" border-l-2 border-[#000000]"></div>
             <div className="m-4">
-              <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#000000] font-bold">
+              <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#145387] font-bold">
                 Export it
               </h1>
               <h4 className="text-[#000000] lg:text-[18px] md:text-[18px] py-5 text-[13px] font-popPins">
@@ -88,12 +88,12 @@ export default function Home() {
                 that is ready to be hosted.
               </h4>
               <div className="lg:w-[364px] lg:h-[316px] md:w-[264px] w-[223px]">
-                <Image src={require("../../../public/png/export.png")} alt="" />
+                <Image src={require("../../../public/png/img3.png")} alt="" />
               </div>
             </div>
             <div className=" border-l-2 border-[#000000]"></div>
             <div className="m-4">
-              <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#000000] font-bold">
+              <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#145387] font-bold">
                 Integrate it
               </h1>
               <h4 className="text-[#000000] lg:text-[18px] md:text-[18px] py-5 text-[14px] font-popPins">
@@ -101,7 +101,7 @@ export default function Home() {
                 second-by-second.
               </h4>
               <div className="lg:w-[364px] lg:h-[300px] md:w-[264px] w-[223px]">
-                <Image src={require("../../../public/png/icon1.png")} alt="" />
+                <Image src={require("../../../public/png/img4.png")} alt="" />
               </div>
             </div>
           </div>
@@ -109,10 +109,10 @@ export default function Home() {
 
         <div className="flex flex-col lg:flex-row md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-between">
           <div className="lg:gap-0 md:gap-0 gap-[30px]">
-            <h4 className="text-[#000000] py-4 lg:text-[22px] md:text-[18px] text-[17px] font-popPins">
+            <h4 className="text-[#0F76CA] py-4 lg:text-[22px] md:text-[18px] text-[17px] font-popPins">
               MAJI IS A developer-friendly integration
             </h4>
-            <h1 className="lg:text-[36px] md:text-[25px] text-[18px] font-firaCode  font-bold">
+            <h1 className="lg:text-[36px] md:text-[25px] text-[#072146] text-[18px] font-firaCode  font-bold">
               Get cross-chain subscriptions <br /> with just a few lines of
               code.
             </h1>
@@ -132,17 +132,18 @@ export default function Home() {
             </button>
           </div>
           <div className="lg:w-[537px] md:w-[437px] lg:h-[537px] md:h-[437px] items-center flex">
-            <Image src={require("../../../public/png/code1.png")} alt="" />
+            <Image src={require("../../../public/png/img5.png")} alt="" />
           </div>
         </div>
+          </div>
 
-        <div className="py-[10vh]">
-          <div className="border-2 rounded-3xl h-[100%] p-7 border-[#000000]">
+        <div className="py-[10vh] bg-[#004481] w-full">
+          <div className="rounded-3xl h-[100%] border-none w-[90%] lg:px-8 md:px-5 px-4 p-5 bg-[#043263]">
             <div className="gap-[30vh]">
-              <h1 className="lg:text-[36px] md:text-[27px] text-[22px] font-firaCode font-bold text-center">
+              <h1 className="lg:text-[36px] md:text-[27px] text-[22px] text-[#FFFFFF] font-firaCode font-bold text-center">
                 Watch your revenue increase in real-time.
               </h1>
-              <p className="text-center lg:text-[18px] md:text-[15px] py-5 text-[13px] text-[#000000]">
+              <p className="text-center lg:text-[18px] md:text-[15px] py-5 text-[13px] text-[#FFFFFF]">
                 With a single transaction, Maji Subscriptions flow by the second
                 into your wallet, cutting <br /> down on transaction costs and
                 enabling immediate access to capital.
@@ -154,7 +155,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:py-[10vh] md:py-[10vh] py-[4vh]">
+        <div className="lg:py-[10vh] md:py-[10vh] py-[4vh] bg-[#EAF9FA]">
           <div className="flex flex-col justify-center items-center">
             <Image
               src={require("../../../public/png/heroA2.png")}
@@ -162,10 +163,10 @@ export default function Home() {
               className="lg:w-[30%] md:w-[50%] w-[70%]"
             />
             <div className="flex flex-col justify-center items-center">
-              <h4 className="text-[#000000] py-5 lg:text-[22px] md:text-[20px] text-[18px] font-popPins">
+              <h4 className="text-[#0F76CA] py-4 lg:text-[22px] md:text-[20px] text-[18px] font-popPins">
                 BUILT FOR SCALING
               </h4>
-              <h1 className="lg:text-[36px] md:text-[33px] text-[18px] font-firaCode font-bold">
+              <h1 className="text-[#072146] lg:text-[36px] md:text-[33px] text-[18px] font-firaCode font-bold">
                 See it in action
               </h1>
 
@@ -177,6 +178,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+          <div/>
       </div>
     </>
   );
