@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link"
 
 
 export default function Home() {
@@ -25,14 +26,14 @@ export default function Home() {
         />
       </Head>
 
-      <Head>
+      {/* <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,700&family=Fira+Code:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,500;1,700;1,800&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
         />
-      </Head>
+      </Head> */}
 
       <div className="lg:px-8 md:px-5 px-4 bg-[#FFFFFF]">
         <div className="flex flex-col lg:flex-row md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-around">
@@ -167,14 +168,12 @@ export default function Home() {
               <h1 className="lg:text-[36px] md:text-[33px] text-[18px] font-firaCode font-bold">
                 See it in action
               </h1>
-              <button className="py-4">
-                <a
-                  href=""
-                  className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
-                >
+
+                  <Link className="py-4" href={{pathname: "widgetPage"}} >
+              <button className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]">
                   Check our demo
-                </a>
               </button>
+                </Link>
             </div>
           </div>
         </div>
