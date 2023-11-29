@@ -29,12 +29,21 @@ export default function CheckoutPage() {
     }
   }, [image]);
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
+  // const handleImageChange = (e) => {
+  //   const file = e.target.files[0];
 
+  //   if (file) {
+  //     const imageUrl = URL.createObjectURL(file);
+  //     setImage(imageUrl);
+  //   }
+  // };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files && e.target.files[0];
+  
     if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setImage(imageUrl);
+      // Handle the file
+      console.log('Selected file:', file);
     }
   };
 
