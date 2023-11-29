@@ -1,6 +1,6 @@
 import CheckoutPage from "../checkoutPage/page"
 
-import WidgetPreview from "../WidgetPreview/page"
+import WidgetPreviewPage from '../widgetPreview/page';
 
 
 export default function WidgetPage() {
@@ -11,7 +11,7 @@ export default function WidgetPage() {
         </div>
 
        <div className="lg:block hidden">
-       <WidgetPreview />
+       <WidgetPreviewPage />
        </div>
 
     </div>
