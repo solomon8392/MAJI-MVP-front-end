@@ -62,23 +62,26 @@ export default function CheckoutPage() {
         <div className="bg-[#1db227] w-[100%] h-[10vh] flex justify-center items-center">
           <h1 className="">Checkout Builder</h1>
         </div>
-        <div className="px-5">
-          <ul className="flex gap-[20px] cursor-pointer">
+        <div className="">
+          <div className=" bg-[gray]">
+          <ul className="flex gap-[20px] px-5 cursor-pointer justify-around">
             {items.map((item, index) => (
               <li
                 key={index}
                 onClick={() => setShowContent(index)}
                 className={
-                  showContent === index ? "text-blue-700" : "text-black"
+                  showContent === index ? "text-blue-700 bg-[red] w-[20%] h-[20%] flex justify-center" : "bg-[pink] w-[20%] h-[20%] flex justify-center text-black"
                 }
               >
                 <a>{item}</a>
               </li>
             ))}
           </ul>
+          </div>
 
-          <div className="h-[75vh]">
-            <div className="overflow-y-auto">
+
+          <div className=" px-5">
+            <div className="overflow-y-scroll h-[500px]">
               {showContent === 0 && (
                 <div className="">
                   <div className="flex absolute px-5 left-0 items-center justify-center h-full">
@@ -382,18 +385,16 @@ export default function CheckoutPage() {
             </div>
           </div>
         </div>
-      <FormControl>
+      {/* <FormControl>
       <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
       <RadioGroup
         aria-labelledby="demo-controlled-radio-buttons-group"
         name="controlled-radio-buttons-group"
-        // value={value}
-        // onChange={handleChange}
       >
         <FormControlLabel value="female" control={<Radio />} label="Female" />
         <FormControlLabel value="male" control={<Radio />} label="Male" />
       </RadioGroup>
-    </FormControl>
+    </FormControl> */}
       </div>
 
     </section>
