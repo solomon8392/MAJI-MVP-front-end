@@ -19,39 +19,31 @@ export default function CheckoutPage() {
     "5.Backing",
   ];
   const [showContent, setShowContent] = useState(0);
-
   const storedImage = localStorage.getItem("selectedImage");
-  const [image, setImage] = useState(storedImage);
-
+  const [image, setImage] = useState<string | null>(storedImage);
+  
   useEffect(() => {
     if (image) {
       localStorage.setItem("selectedImage", image);
     }
   }, [image]);
-
-  // const handleImageChange = (e) => {
-  //   const file = e.target.files[0];
-
-  //   if (file) {
-  //     const imageUrl = URL.createObjectURL(file);
-  //     setImage(imageUrl);
-  //   }
-  // };
-
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files && e.target.files[0];
   
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]; // Use optional chaining
+    
     if (file) {
-      // Handle the file
       console.log('Selected file:', file);
+      
+      const imageUrl = URL.createObjectURL(file);
+      setImage(imageUrl);
     }
   };
-
+  
   const handleCancel = () => {
     setImage(null);
     localStorage.removeItem("selectedImage");
   };
-
+  
   const Addsitems = ["NETWORK", "TOKEN", "Stream Rate", "Receiver"];
   const Addsitems1 = ["Goerli", "USDC", "100 / month", "0xF26C...3a22"];
 
