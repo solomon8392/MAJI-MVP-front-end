@@ -63,23 +63,24 @@ export default function CheckoutPage() {
           <h1 className="text-[22px] text-[#FFFFFF]">WIDGET BUILDER</h1>
         </div>
         <div className="">
-          <div className=" bg-[#DADADA] h-[10vh]">
-            <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
-              {items.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => setShowContent(index)}
-                  className={
-                    showContent === index
-                      ? "text-[#0F76CA] bg-[#FFFFFF] w-[20%] rounded-[2px] flex justify-center"
-                      : "bg-[none] w-[20%] h-[20%] flex justify-center text-[#000000]"
-                  }
-                >
-                  <a>{item}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="bg-[#DADADA] h-[7vh]">
+  <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
+    {items.map((item, index) => (
+      <li
+        key={index}
+        onClick={() => setShowContent(index)}
+        className={
+          showContent === index
+            ? "text-[#0F76CA] bg-[#FFFFFF] h-[7vh] text-center items-center w-[20%] rounded-t-[20%] flex justify-center"
+            : "bg-transparent w-1/5 h-[20%] flex justify-center text-[#000000]"
+        }
+      >
+        <a>{item}</a>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
           <div className=" px-5 overflow-y-scroll h-[500px]">
             <div className="">
