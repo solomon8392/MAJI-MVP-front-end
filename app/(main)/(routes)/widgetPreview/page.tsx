@@ -3,6 +3,10 @@
 
 export default function WidgetPreview() {
     return (
+        <div className="w-[50%] relative">
+        <div className="bg-[#0F76CA] w-[100%] h-[10vh] flex justify-center items-center">
+          <h1 className="text-[22px] text-[#FFFFFF]">WIDGET BUILDER</h1>
+        </div>
         <div className="bg-[#eaeff4] w-[100%] h-[36.3rem]">
             <div>
                 <h1 className="text-center"> Widget Preview </h1>
@@ -10,6 +14,7 @@ export default function WidgetPreview() {
 
 </p>
             </div>
+        </div>
         </div>
     )
 }

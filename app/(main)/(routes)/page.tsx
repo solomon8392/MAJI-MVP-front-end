@@ -26,16 +26,9 @@ export default function Home() {
         />
       </Head>
 
-      {/* <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,700&family=Fira+Code:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,500;1,700;1,800&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        />
-      </Head> */}
 
-      <div className="g-[#FFFFFF]">
+
+      <div className="">
         <div className="flex flex-col lg:flex-row bg-[#EAF9FA] w-full  md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-around">
           <div className="">
             <h4 className="text-[#0F76CA] py-5 lg:text-[22px] md:text-[20px] text-[18px] font-popPins">
@@ -65,7 +58,7 @@ export default function Home() {
           <h1 className="lg:text-[36px] md:text-[27px] text-[22px] font-firaCode text-[#072146] font-bold text-center">
             Build your subscription checkout in 3 easy steps
           </h1>
-          <div className="border-t-2 border-b-2 border-[#000000] flex flex-col lg:flex-row ">
+          <div className="border-t-2 border-b-2 border-[#A6C4C6] flex flex-col lg:flex-row ">
             <div className="m-4">
               <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#145387] font-bold">
                 Customize widget
@@ -78,7 +71,7 @@ export default function Home() {
                 <Image src={require("../../../public/png/img2.png")} alt="" />
               </div>
             </div>
-            <div className=" border-l-2 border-[#000000]"></div>
+            <div className=" border-l-2 border-[#A6C4C6]"></div>
             <div className="m-4">
               <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#145387] font-bold">
                 Export it
@@ -91,7 +84,7 @@ export default function Home() {
                 <Image src={require("../../../public/png/img3.png")} alt="" />
               </div>
             </div>
-            <div className=" border-l-2 border-[#000000]"></div>
+            <div className=" border-l-2 border-[#A6C4C6]"></div>
             <div className="m-4">
               <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#145387] font-bold">
                 Integrate it

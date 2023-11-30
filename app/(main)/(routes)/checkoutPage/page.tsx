@@ -12,11 +12,11 @@ import Slider from "@mui/material/Slider";
 
 export default function CheckoutPage() {
   const items = [
-    "1.Product",
-    "2.Payment",
-    "3.Styling",
-    "4.Export",
-    "5.Backing",
+    "1. Product",
+    "2. Payment",
+    "3. Styling",
+    "4. Export",
+    "5. Backing",
   ];
   const [showContent, setShowContent] = useState(0);
   const storedImage = localStorage.getItem("selectedImage");
@@ -29,7 +29,7 @@ export default function CheckoutPage() {
   }, [image]);
   
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]; // Use optional chaining
+    const file = e.target.files?.[0];
     
     if (file) {
       console.log('Selected file:', file);
@@ -60,18 +60,18 @@ export default function CheckoutPage() {
   return (
     <section className="w-[50%] absolute">
       <div className="">
-        <div className="bg-[#1db227] w-[100%] h-[10vh] flex justify-center items-center">
-          <h1 className="">Checkout Builder</h1>
+        <div className="bg-[#0F76CA] w-[100%] h-[10vh] flex justify-center items-center">
+          <h1 className="text-[22px] text-[#FFFFFF]">WIDGET BUILDER</h1>
         </div>
         <div className="">
-          <div className=" bg-[gray]">
-          <ul className="flex gap-[20px] px-5 cursor-pointer justify-around">
+          <div className=" bg-[#DADADA] h-[10vh]">
+          <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
             {items.map((item, index) => (
               <li
                 key={index}
                 onClick={() => setShowContent(index)}
                 className={
-                  showContent === index ? "text-blue-700 bg-[red] w-[20%] h-[20%] flex justify-center" : "bg-[pink] w-[20%] h-[20%] flex justify-center text-black"
+                  showContent === index ? "text-[#0F76CA] bg-[#FFFFFF] w-[20%] rounded-[2px] flex justify-center" : "bg-[none] w-[20%] h-[20%] flex justify-center text-[#000000]"
                 }
               >
                 <a>{item}</a>
@@ -81,14 +81,14 @@ export default function CheckoutPage() {
           </div>
 
 
-          <div className=" px-5">
-            <div className="overflow-y-scroll h-[500px]">
+          <div className=" px-5 overflow-y-scroll h-[500px]">
+            <div className="">
               {showContent === 0 && (
                 <div className="">
                   <div className="flex absolute px-5 left-0 items-center justify-center h-full">
                     <div className="">
                       <div className="grid gap-[13px]">
-                        <h1 className="text-[24px] text-[#000000] font-popPins font-bold">
+                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
                           Checkout Product Details
                         </h1>
                         <p className="font-popPins text-[18px] text-[#000000]">
@@ -98,7 +98,7 @@ export default function CheckoutPage() {
                         </p>
                       </div>
                       <div className="grid gap-2 py-4">
-                        <span className="text-[18px] text-[#4e3939] font-popPins">
+                        <span className="text-[18px] text-[#444A6A] font-popPins">
                           Product Name
                         </span>
                         <input
@@ -109,8 +109,8 @@ export default function CheckoutPage() {
                         />
                       </div>
                       <div className="grid gap-2">
-                        <span className="text-[18px] text-[#000000] font-popPins">
-                          Product Name
+                        <span className="text-[18px] text-[#444A6A] font-popPins">
+                        Product Description
                         </span>
                         <textarea
                           id="myTextarea"
@@ -150,7 +150,7 @@ export default function CheckoutPage() {
                           )}
                         </div>
 
-                        <span>Product Image</span>
+                        <span className="text-[#000000] text-[18px] font-popPins">Product Image</span>
                       </div>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ export default function CheckoutPage() {
                   <div className="flex flex-col absolute top-[0px] px-4 gap-[30px] left-0 items-center justify-center h-full">
                     <div className="grid gap-[30px]">
                       <div className="">
-                        <h1 className="text-[24px] text-[#000000] font-popPins font-bold">
+                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
                           Checkout Product Details
                         </h1>
                         <p className="font-popPins text-[18px] text-[#000000]">
@@ -172,7 +172,7 @@ export default function CheckoutPage() {
                       </div>
 
                       <div className="">
-                        <h1 className="text-[24px] text-[#000000] font-popPins font-bold">
+                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
                           Payment Methods
                         </h1>
                         <button className="w-[237px] items-center text-center h-[7vh] bg-[#0F76CA] gap-[10px]">
@@ -232,7 +232,7 @@ export default function CheckoutPage() {
                   <div className="flex flex-col absolute top-[0px] px-4 gap-[30px] left-0 items-center justify-center h-full">
                     <div className="grid">
                       <div className="">
-                        <h1 className="text-[24px] text-[#000000] font-popPins font-bold">
+                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
                           Widget Styling
                         </h1>
                         <p className="font-popPins text-[18px] text-[#000000]">
@@ -286,12 +286,12 @@ export default function CheckoutPage() {
                       </div>
 
                       <div className="grid">
-                        <h1 className="text-[24px] text-[#000000]">Color</h1>
+                        <h1 className="text-[24px] text-[#444A6A]">Color</h1>
                         <div className="flex">
                             <div className="grid">
                                 <h3>Primary color</h3>
                                 <input
-                          className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none h-[52px] w-[307px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                          className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
                           type="text"
                           aria-label="Filter projects"
                           placeholder=""
@@ -300,7 +300,7 @@ export default function CheckoutPage() {
                             <div className="grid">
                                 <h3>Background color</h3>
                                 <input
-                          className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none h-[52px] w-[307px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                          className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
                           type="text"
                           aria-label="Filter projects"
                           placeholder=""
