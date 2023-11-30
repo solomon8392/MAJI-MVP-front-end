@@ -5,7 +5,7 @@ export default function WidgetPreview() {
     return (
         <div className="w-[103.8vh] relative">
         <div className="bg-[#043263] w-[100%] h-[10vh] flex justify-center items-center">
-          <h1 className="text-[22px] text-[#FFFFFF]">WIDGET BUILDER</h1>
+          <h1 className="text-[22px] text-[#FFFFFF]">WIDGET PREVIEW</h1>
         </div>
         <div className="bg-[#eaeff4] w-[100%] h-[36.6rem]">
             <div>
