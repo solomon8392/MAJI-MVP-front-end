@@ -63,29 +63,30 @@ export default function CheckoutPage() {
           <h1 className="text-[22px] text-[#FFFFFF]">WIDGET BUILDER</h1>
         </div>
         <div className="">
-          <div className=" bg-[#DADADA] h-[10vh]">
-            <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
-              {items.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => setShowContent(index)}
-                  className={
-                    showContent === index
-                      ? "text-[#0F76CA] bg-[#FFFFFF] w-[20%] rounded-[2px] flex justify-center"
-                      : "bg-[none] w-[20%] h-[20%] flex justify-center text-[#000000]"
-                  }
-                >
-                  <a>{item}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="bg-[#DADADA] h-[7vh]">
+  <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
+    {items.map((item, index) => (
+      <li
+        key={index}
+        onClick={() => setShowContent(index)}
+        className={
+          showContent === index
+            ? "text-[#0F76CA] bg-[#FFFFFF] h-[7vh] text-center text-[18px] font-bold items-center w-[20%] rounded-tl-0 rounded-tr-[20px] rounded-tl-[20px] rounded-br-0 rounded-bl-0 flex justify-center"
+            : "bg-transparent w-1/5 h-[20%]  flex justify-center text-[18px] font-bold text-[#000000]"
+        }
+      >
+        <a>{item}</a>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
           <div className=" px-5 overflow-y-scroll h-[500px]">
             <div className="">
               {showContent === 0 && (
                 <div className="">
-                  <div className="flex absolute px-5 left-0 items-center justify-center h-full">
+                  <div className="flex absolute px-5 left-0 items-center top-[12.9%] justify-center h-full">
                     <div className="">
                       <div className="grid gap-[13px]">
                         <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
@@ -118,7 +119,7 @@ export default function CheckoutPage() {
                           placeholder="Product Description"
                         />
                       </div>
-                      <div className="flex flex-col items-center gap-5 py-4">
+                      <div className="flex flex-col items-center justify-center text-center gap-5 py-4">
                         <div>
                           <input
                             type="file"
@@ -156,12 +157,13 @@ export default function CheckoutPage() {
                               height={100}
                               src={image as string}
                               alt=""
-                              style={{ maxWidth: "50%", height: "49%" }}
+                              style={{ maxWidth: "50%", height: "59%" }}
+                              className="flex justify-center items-center "
                             />
                           )}
                         </div>
 
-                        <span className="text-[#000000] text-[18px] font-popPins">
+                        <span className="text-[#000000] text-[18px] font-bold text-center font-popPins">
                           Product Image
                         </span>
                       </div>
