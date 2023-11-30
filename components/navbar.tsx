@@ -5,8 +5,9 @@ import { useScrollTop } from "@/hooks/use-scroll";
 // import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Image from "next/image"
 import { useRouter } from "next/navigation";
 export const Navbar = () => {
   const router = useRouter();
@@ -25,20 +26,20 @@ export const Navbar = () => {
         }}
       >
         <Image
-          src="/svg/Black logo - no background.svg"
+          src="/png/majiimg.png"
           alt={"Logo"}
-          width={"100"}
-          height={"100"}
+          width={"60"}
+          height={"60"}
           className="dark:hidden"
         />
-
         <Image
-          src="/svg/White logo - no background.svg"
+          src="/png/majiimg.png"
           alt={"Logo"}
-          width={"100"}
-          height={"100"}
+          width={"60"}
+          height={"60"}
           className="hidden dark:block"
         />
+
       </span>
       <div className="flex items-center justify-around">
         {/* {!!user ? (

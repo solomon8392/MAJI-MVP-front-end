@@ -46,7 +46,7 @@ export const App = ({ children }: { children: React.ReactNode }) => {
           coolMode
         >
           <Toaster position="bottom-center" />
-          <Navbar />
+         
           {children}
         </RainbowKitProvider>
       </WagmiConfig>
