@@ -131,6 +131,8 @@ export default function CheckoutPage() {
                           {!image && (
                             <label htmlFor="imageInput">
                               <Image
+                                width={100}
+                                height={100}
                                 src={require("/public/png/icon2.png")}
                                 alt=""
                                 className="w-[61px] h-[61px] cursor-pointer"
@@ -150,6 +152,8 @@ export default function CheckoutPage() {
                           )} */}
                           {image != null && (
                             <Image
+                              width={100}
+                              height={100}
                               src={image as string}
                               alt=""
                               style={{ maxWidth: "50%", height: "49%" }}
@@ -216,11 +220,15 @@ export default function CheckoutPage() {
                           {hoveredIndex === "icons" && (
                             <div className="flex justify-center absolute items-center text-center">
                               <Image
+                                width={100}
+                                height={100}
                                 src={require("/public/png/delete.png")}
                                 alt=""
                                 className=""
                               />
                               <Image
+                                width={100}
+                                height={100}
                                 src={require("/public/png/Edit.png")}
                                 alt=""
                                 className=""
@@ -382,7 +390,12 @@ export default function CheckoutPage() {
 
                   <div className="">
                     <div>
-                      <Image src={require("/public/png/icon2.png")} alt="" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src={require("/public/png/icon2.png")}
+                        alt=""
+                      />
                       <h1>NFT Image</h1>
                     </div>
                     <div>
