@@ -1,20 +1,18 @@
-import CheckoutPage from "../checkoutPage/page"
+"use client";
+import CheckoutPage from "../checkoutPage/page";
 
-import WidgetPreviewPage from '../widgetPreview/page';
-
+import WidgetPreviewPage from "../widgetPreview/page";
 
 export default function WidgetPage() {
-  return(
+  return (
     <div className="flex lg:flex-row md:flex-col flex-col justify-between  fixed w-[100%]">
-        <div className="">
+      <div className="">
         <CheckoutPage />
-        </div>
+      </div>
 
-       <div className="">
-       <WidgetPreviewPage />
-       </div>
-
+      <div className="">
+        <WidgetPreviewPage />
+      </div>
     </div>
-  )
+  );
 }
-

@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
 import Slider from "@mui/material/Slider";
 
 export default function CheckoutPage() {
@@ -19,37 +19,36 @@ export default function CheckoutPage() {
     "5. Backing",
   ];
   const [showContent, setShowContent] = useState(0);
-  const storedImage = localStorage.getItem("selectedImage");
-  const [image, setImage] = useState<string | null>(storedImage);
-  
+  const [image, setImage] = useState<string | null>(null);
+
   useEffect(() => {
-    if (image) {
+    if (image && typeof window !== "undefined") {
       localStorage.setItem("selectedImage", image);
     }
   }, [image]);
-  
+
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    
+
     if (file) {
-      console.log('Selected file:', file);
-      
+      console.log("Selected file:", file);
+
       const imageUrl = URL.createObjectURL(file);
       setImage(imageUrl);
     }
   };
-  
+
   const handleCancel = () => {
     setImage(null);
     localStorage.removeItem("selectedImage");
   };
-  
+
   const Addsitems = ["NETWORK", "TOKEN", "Stream Rate", "Receiver"];
   const Addsitems1 = ["Goerli", "USDC", "100 / month", "0xF26C...3a22"];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const handleMouseEnter = (index) => {
+  const handleMouseEnter = (index: any) => {
     setHoveredIndex(index);
   };
 
@@ -65,21 +64,22 @@ export default function CheckoutPage() {
         </div>
         <div className="">
           <div className=" bg-[#DADADA] h-[10vh]">
-          <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
-            {items.map((item, index) => (
-              <li
-                key={index}
-                onClick={() => setShowContent(index)}
-                className={
-                  showContent === index ? "text-[#0F76CA] bg-[#FFFFFF] w-[20%] rounded-[2px] flex justify-center" : "bg-[none] w-[20%] h-[20%] flex justify-center text-[#000000]"
-                }
-              >
-                <a>{item}</a>
-              </li>
-            ))}
-          </ul>
+            <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
+              {items.map((item, index) => (
+                <li
+                  key={index}
+                  onClick={() => setShowContent(index)}
+                  className={
+                    showContent === index
+                      ? "text-[#0F76CA] bg-[#FFFFFF] w-[20%] rounded-[2px] flex justify-center"
+                      : "bg-[none] w-[20%] h-[20%] flex justify-center text-[#000000]"
+                  }
+                >
+                  <a>{item}</a>
+                </li>
+              ))}
+            </ul>
           </div>
-
 
           <div className=" px-5 overflow-y-scroll h-[500px]">
             <div className="">
@@ -110,7 +110,7 @@ export default function CheckoutPage() {
                       </div>
                       <div className="grid gap-2">
                         <span className="text-[18px] text-[#444A6A] font-popPins">
-                        Product Description
+                          Product Description
                         </span>
                         <textarea
                           id="myTextarea"
@@ -131,14 +131,14 @@ export default function CheckoutPage() {
                           {!image && (
                             <label htmlFor="imageInput">
                               <Image
-                                src={require("../../../../public/png/icon2.png")}
+                                src={require("/public/png/icon2.png")}
                                 alt=""
                                 className="w-[61px] h-[61px] cursor-pointer"
                               />
                             </label>
                           )}
 
-                          {Image && (
+                          {/* {Image && (
                             <div>
                               <img
                                 src={image}
@@ -147,10 +147,19 @@ export default function CheckoutPage() {
                               />
                               <button onClick={handleCancel}>Cancel</button>
                             </div>
+                          )} */}
+                          {image != null && (
+                            <Image
+                              src={image as string}
+                              alt=""
+                              style={{ maxWidth: "50%", height: "49%" }}
+                            />
                           )}
                         </div>
 
-                        <span className="text-[#000000] text-[18px] font-popPins">Product Image</span>
+                        <span className="text-[#000000] text-[18px] font-popPins">
+                          Product Image
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -207,12 +216,12 @@ export default function CheckoutPage() {
                           {hoveredIndex === "icons" && (
                             <div className="flex justify-center absolute items-center text-center">
                               <Image
-                                src={require("../../../../public/png/delete.png")}
+                                src={require("/public/png/delete.png")}
                                 alt=""
                                 className=""
                               />
                               <Image
-                                src={require("../../../../public/png/Edit.png")}
+                                src={require("/public/png/Edit.png")}
                                 alt=""
                                 className=""
                               />
@@ -259,7 +268,7 @@ export default function CheckoutPage() {
                           </div>
                           <div className="">
                             <h3 className="text-[18px] text-[#000000]">
-                            Field border-radius: X
+                              Field border-radius: X
                             </h3>
                             <Box sx={{ width: 500 }}>
                               <Slider
@@ -282,30 +291,29 @@ export default function CheckoutPage() {
                             </Box>
                           </div>
                         </div>
-
                       </div>
 
                       <div className="grid">
                         <h1 className="text-[24px] text-[#444A6A]">Color</h1>
                         <div className="flex">
-                            <div className="grid">
-                                <h3>Primary color</h3>
-                                <input
-                          className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
-                          type="text"
-                          aria-label="Filter projects"
-                          placeholder=""
-                        />
-                            </div>
-                            <div className="grid">
-                                <h3>Background color</h3>
-                                <input
-                          className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
-                          type="text"
-                          aria-label="Filter projects"
-                          placeholder=""
-                        />
-                            </div>
+                          <div className="grid">
+                            <h3>Primary color</h3>
+                            <input
+                              className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                              type="text"
+                              aria-label="Filter projects"
+                              placeholder=""
+                            />
+                          </div>
+                          <div className="grid">
+                            <h3>Background color</h3>
+                            <input
+                              className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                              type="text"
+                              aria-label="Filter projects"
+                              placeholder=""
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -343,50 +351,50 @@ export default function CheckoutPage() {
                 </div>
               )}
 
-            {showContent === 4 && (
-               <div className="">
-                 <div className="">
-                    <div className="">
-                        <h1>NFT Symbol</h1>
-                        <input
-                          className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
-                          type="text"
-                          aria-label="Filter projects"
-                        />
-                    </div>
-                    <div className="">
-                        <h1>NFT Name</h1>
-                        <input
-                          className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
-                          type="text"
-                          aria-label="Filter projects"
-                        />
-                    </div>
-                    <div className="">
-                        <h1>Contract Owner</h1>
-                        <input
-                          className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
-                          type="text"
-                          aria-label="Filter projects"
-                        />
-                    </div>
-                </div>
-
+              {showContent === 4 && (
                 <div className="">
-                    <div> 
-                        <Image src={require ("../../../../public/png/icon2.png")} alt="" />
-                        <h1>NFT Image</h1>
+                  <div className="">
+                    <div className="">
+                      <h1>NFT Symbol</h1>
+                      <input
+                        className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                        type="text"
+                        aria-label="Filter projects"
+                      />
+                    </div>
+                    <div className="">
+                      <h1>NFT Name</h1>
+                      <input
+                        className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                        type="text"
+                        aria-label="Filter projects"
+                      />
+                    </div>
+                    <div className="">
+                      <h1>Contract Owner</h1>
+                      <input
+                        className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                        type="text"
+                        aria-label="Filter projects"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="">
+                    <div>
+                      <Image src={require("/public/png/icon2.png")} alt="" />
+                      <h1>NFT Image</h1>
                     </div>
                     <div>
-                        <button>Create NFT</button>
+                      <button>Create NFT</button>
                     </div>
+                  </div>
                 </div>
-               </div>
-            )}
+              )}
             </div>
           </div>
         </div>
-      {/* <FormControl>
+        {/* <FormControl>
       <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
       <RadioGroup
         aria-labelledby="demo-controlled-radio-buttons-group"
@@ -397,7 +405,6 @@ export default function CheckoutPage() {
       </RadioGroup>
     </FormControl> */}
       </div>
-
     </section>
   );
 }
