@@ -28,15 +28,15 @@ export const Navbar = () => {
         <Image
           src="/png/majiimg.png"
           alt={"Logo"}
-          width={"60"}
-          height={"60"}
+          width={"55"}
+          height={"55"}
           className="dark:hidden"
         />
         <Image
           src="/png/majiimg.png"
           alt={"Logo"}
-          width={"60"}
-          height={"60"}
+          width={"55"}
+          height={"55"}
           className="hidden dark:block"
         />
 

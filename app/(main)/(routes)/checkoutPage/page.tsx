@@ -57,7 +57,6 @@ export default function CheckoutPage() {
     setHoveredIndex(null);
   };
 
-
   const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = () => {
@@ -191,10 +190,9 @@ export default function CheckoutPage() {
                           Payment Methods
                         </h1>
                         <div className="lg:py-6 md:py-5 py-3 border-none">
-
-                        <button className="lg:w-[277px] md:w-[270px] w-[225px] border-none items-center text-[#EAF9FA] lg:text-[18px] md:text-[16px] text-[15px] text-center h-[7vh] bg-[#0F76CA] ">
-                          Add New Payment Method
-                        </button>
+                          <button className="lg:w-[277px] md:w-[270px] w-[225px] border-none items-center text-[#EAF9FA] lg:text-[18px] md:text-[16px] text-[15px] text-center h-[7vh] bg-[#0F76CA] ">
+                            Add New Payment Method
+                          </button>
                         </div>
                       </div>
 
@@ -225,17 +223,19 @@ export default function CheckoutPage() {
                           {hoveredIndex === "icons" && (
                             <div className="flex justify-center absolute items-center text-center">
                               <div>
-      <div className="" onClick={handleOpenModal}>
-        <Image
-          width={25}
-          height={25}
-          src={require("/public/png/delete.png")}
-          alt=""
-          className=""
-        />
-      </div>
-      {openModal && <Modal closeModal={handleCloseModal} />}
-    </div>
+                                <div className="" onClick={handleOpenModal}>
+                                  <Image
+                                    width={25}
+                                    height={25}
+                                    src={require("/public/png/delete.png")}
+                                    alt=""
+                                    className=""
+                                  />
+                                </div>
+                                {openModal && (
+                                  <Modal closeModal={handleCloseModal} />
+                                )}
+                              </div>
 
                               <div className="">
                                 <Image
@@ -245,8 +245,6 @@ export default function CheckoutPage() {
                                   alt=""
                                   className=""
                                 />
-
-                                {/* <Modal /> */}
                               </div>
                             </div>
                           )}
@@ -281,43 +279,45 @@ export default function CheckoutPage() {
                             <h3 className="lg:text-[18px] md:text-[16px] text-[13px] text-[#000000]">
                               Container border-radius: X
                             </h3>
-                              <div className="lg:w-[90%] md:w-[100%] w-[100%]">
-                                <Slider
+                            <div className="lg:w-[90%] md:w-[100%] w-[100%]">
+                              <Slider
                                 defaultValue={50}
                                 aria-label="Default"
                                 valueLabelDisplay="auto"
                               />
-                              </div>
+                            </div>
                           </div>
                           <div className="">
                             <h3 className="lg:text-[18px] md:text-[16px] text-[13px] text-[#000000]">
                               Field border-radius: X
                             </h3>
-                              <div className="lg:w-[90%] md:w-[100%] w-[100%]">
-                                <Slider
+                            <div className="lg:w-[90%] md:w-[100%] w-[100%]">
+                              <Slider
                                 defaultValue={50}
                                 aria-label="Default"
                                 valueLabelDisplay="auto"
                               />
-                              </div>
+                            </div>
                           </div>
                           <div className="">
                             <h3 className="lg:text-[18px] md:text-[16px] text-[13px] text-[#000000]">
                               Button border-radius: X
                             </h3>
-                           <div className="lg:w-[90%] md:w-[100%] w-[100%]">
-                                <Slider
+                            <div className="lg:w-[90%] md:w-[100%] w-[100%]">
+                              <Slider
                                 defaultValue={50}
                                 aria-label="Default"
                                 valueLabelDisplay="auto"
                               />
-                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
 
                       <div className="grid">
-                        <h1 className="lg:text-[24px] md:text-[20px] font-bold text-[15px] text-[#444A6A]">Color</h1>
+                        <h1 className="lg:text-[24px] md:text-[20px] font-bold text-[15px] text-[#444A6A]">
+                          Color
+                        </h1>
                         <div className=" lg:flex md:flex-col flex-col py-2 gap-6">
                           <div className="grid">
                             <h3>Primary color</h3>
@@ -386,7 +386,7 @@ export default function CheckoutPage() {
                     </button>
                   </div>
                   <div className="grid gap-2">
-                     <h1 className="font-popPins text-[#000000] lg:text-[24px] md:text-[20px] text-[18px]">
+                    <h1 className="font-popPins text-[#000000] lg:text-[24px] md:text-[20px] text-[18px]">
                       Publish Json
                     </h1>
                     <span className="font-popPins lg:text-[18px] md:text-[16px] text-[9px] text-[#000000]">

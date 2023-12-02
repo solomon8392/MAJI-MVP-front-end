@@ -14,7 +14,7 @@ interface ModalProps {
   
     return (
       <div className="modalBackground">
-        <div className="grid absolute items-center left-[50vh]">
+        <div className="modalContainer">
           <div className="">
           <button onClick={closeModal}>X</button>
           </div>
