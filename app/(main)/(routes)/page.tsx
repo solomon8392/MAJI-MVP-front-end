@@ -146,7 +146,7 @@ export default function Home() {
                 enabling immediate access to capital.
               </p>
               <div className="flex justify-center items-center">
-                <Image src={require("../../../public/png/code2.png")} alt="" />
+                <Image src={require("../../../public/png/101.png")} alt="" />
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="lg:py-[10vh] md:py-[10vh] py-[4vh] bg-[#EAF9FA]">
           <div className="flex flex-col justify-center items-center">
             <Image
-              src={require("../../../public/png/heroA2.png")}
+              src={require("../../../public/png/102.png")}
               alt=""
               className="lg:w-[30%] md:w-[50%] w-[70%]"
             />
