@@ -31,7 +31,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row bg-[#EAF9FA] w-full  md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-around">
           <div className="">
             <h4 className="text-[#0F76CA] py-5 lg:text-[22px] md:text-[20px] text-[18px] font-popPins">
-              Accelerate revenue
+              ACCELERATE REVENUE
             </h4>
             <h1 className="lg:text-[36px] md:text-[33px] text-[18px] font-firaCode font-bold">
               Instantly boost subscriptions <br /> with cross-chain payments
@@ -42,7 +42,7 @@ export default function Home() {
             <button>
               <a
                 href=""
-                className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
+                className="bg-[#3742FA] text-[#FFFFFF] border-none font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
               >
                 Check our demo
               </a>
@@ -117,7 +117,7 @@ export default function Home() {
               <button>
                 <a
                   href=""
-                  className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
+                  className="bg-[#3742FA] border-none text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
                 >
                   Check our demo
                 </a>
@@ -163,7 +163,7 @@ export default function Home() {
               </h1>
 
               <Link className="py-4" href={{ pathname: "widgetPage" }}>
-                <button className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]">
+                <button className="bg-[#3742FA] border-none text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]">
                   Check our demo
                 </button>
               </Link>

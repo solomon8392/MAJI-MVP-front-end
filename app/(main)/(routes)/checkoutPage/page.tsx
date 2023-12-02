@@ -9,6 +9,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Slider from "@mui/material/Slider";
+import Modal from "../../Modal/page";
 
 export default function CheckoutPage() {
   const items = [
@@ -56,66 +57,76 @@ export default function CheckoutPage() {
     setHoveredIndex(null);
   };
 
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
   return (
-    <section className="w-[50%] absolute">
+    <section className="lg:w-[50%] md:w-[100%] w-[100%] absolute">
       <div className="">
         <div className="bg-[#0F76CA] w-[100%] h-[10vh] flex justify-center items-center">
           <h1 className="text-[22px] text-[#FFFFFF]">WIDGET BUILDER</h1>
         </div>
         <div className="">
-        <div className="bg-[#DADADA] h-[7vh]">
-  <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
-    {items.map((item, index) => (
-      <li
-        key={index}
-        onClick={() => setShowContent(index)}
-        className={
-          showContent === index
-            ? "text-[#0F76CA] bg-[#FFFFFF] h-[7vh] text-center text-[18px] font-bold items-center w-[20%] rounded-tl-0 rounded-tr-[20px] rounded-tl-[20px] rounded-br-0 rounded-bl-0 flex justify-center"
-            : "bg-transparent w-1/5 h-[20%]  flex justify-center text-[18px] font-bold text-[#000000]"
-        }
-      >
-        <a>{item}</a>
-      </li>
-    ))}
-  </ul>
-</div>
-
+          <div className="bg-[#DADADA] lg:h-[7vh] md:h-[6vh] h-[5vh] items-center text-center">
+            <ul className="flex gap-[15px] px-5 cursor-pointer justify-around items-center text-center">
+              {items.map((item, index) => (
+                <li
+                  key={index}
+                  onClick={() => setShowContent(index)}
+                  className={
+                    showContent === index
+                      ? "text-[#0F76CA] bg-[#FFFFFF] h-[7vh] text-center lg:text-[15px] text-[8px] md:text-[16px] font-bold items-center w-[20%] rounded-tl-0 lg:rounded-tr-[20px] md:rounded-tr-[10px] rounded-tr-[10px] lg:rounded-tl-[20px] md:rounded-tl-[10px] rounded-tl-[10px] rounded-br-0 rounded-bl-0 flex justify-center"
+                      : "bg-transparent w-1/5 h-[20%] lg:text-[15px] text-[8px] md:text-[16px] flex justify-center font-bold text-[#000000]"
+                  }
+                >
+                  <a>{item}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className=" px-5 overflow-y-scroll h-[500px]">
             <div className="">
               {showContent === 0 && (
                 <div className="">
-                  <div className="flex absolute px-5 left-0 items-center top-[12.9%] justify-center h-full">
+                  <div className="flex absolute px-5 left-0 items-center lg:top-[14.9%] md:top-[11.9%] top-[6.9%] justify-center h-full">
                     <div className="">
                       <div className="grid gap-[13px]">
-                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
+                        <h1 className="lg:text-[24px] md:text-[20px] text-[18px] text-[#145387] font-popPins font-bold">
                           Checkout Product Details
                         </h1>
-                        <p className="font-popPins text-[18px] text-[#000000]">
+                        <p className="font-popPins lg:text-[18px] md:text-[16px] text-[11px] text-[#000000]">
                           Define the product for which you are looking to
                           receive continuous <br /> real-time payment
                           transactions.
                         </p>
                       </div>
                       <div className="grid gap-2 py-4">
-                        <span className="text-[18px] text-[#444A6A] font-popPins">
+                        <span className="lg:text-[18px] md:text-[15px] text-[13px] text-[#444A6A] font-popPins">
                           Product Name
                         </span>
                         <input
-                          className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                          className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none lg:w-[475px] md:w-[605px] w-[103%] h-[49px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins"
                           type="text"
                           aria-label="Filter projects"
                           placeholder="Product Name"
                         />
                       </div>
                       <div className="grid gap-2">
-                        <span className="text-[18px] text-[#444A6A] font-popPins">
+                        <span className="lg:text-[18px] md:text-[15px] text-[13px] text-[#444A6A] font-popPins">
                           Product Description
                         </span>
                         <textarea
                           id="myTextarea"
-                          className="h-[140px] focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-[480px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm"
+                          className="lg:h-[140px] md:h-[130px] h-[108px] focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none lg:w-[478px] md:w-[605px] w-[103%] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm"
                           placeholder="Product Description"
                         />
                       </div>
@@ -136,21 +147,10 @@ export default function CheckoutPage() {
                                 height={100}
                                 src={require("/public/png/icon2.png")}
                                 alt=""
-                                className="w-[61px] h-[61px] cursor-pointer"
+                                className="lg:w-[61px] md:w-[58px] w-[50px] lg:h-[61px] md:h-[58px] h-[50px] cursor-pointer"
                               />
                             </label>
                           )}
-
-                          {/* {Image && (
-                            <div>
-                              <img
-                                src={image}
-                                alt=""
-                                style={{ maxWidth: "50%", height: "49%" }}
-                              />
-                              <button onClick={handleCancel}>Cancel</button>
-                            </div>
-                          )} */}
                           {image != null && (
                             <Image
                               width={100}
@@ -163,7 +163,7 @@ export default function CheckoutPage() {
                           )}
                         </div>
 
-                        <span className="text-[#000000] text-[18px] font-bold text-center font-popPins">
+                        <span className="text-[#000000] lg:text-[18px] md:text-[16px] text-[13px] font-bold text-center font-popPins">
                           Product Image
                         </span>
                       </div>
@@ -173,74 +173,87 @@ export default function CheckoutPage() {
               )}
               {showContent === 1 && (
                 <div className="">
-                  <div className="flex flex-col absolute top-[0px] px-4 gap-[30px] left-0 items-center justify-center h-full">
+                  <div className="flex flex-col absolute lg:top-[8.9%] md:top-[5.9%] top-[1.9%] px-4 gap-[30px] left-0 items-center lg:w-full md:w-full  justify-center h-full">
                     <div className="grid gap-[30px]">
                       <div className="">
-                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
+                        <h1 className="lg:text-[24px] md:text-[20px] text-[#145387] font-popPins font-bold">
                           Checkout Product Details
                         </h1>
-                        <p className="font-popPins text-[18px] text-[#000000]">
+                        <p className="font-popPins lg:text-[18px] md:text-[15px] text-[10px] text-[#000000]">
                           Specify your preferred payment options to start the
-                          process of receiving <br /> continuous real-time
+                          process of <br /> receiving continuous real-time
                           payments through the Maji Protocol.
                         </p>
                       </div>
 
                       <div className="">
-                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
+                        <h1 className="lg:text-[24px] md:text-[20px] text-[#145387] font-popPins font-bold">
                           Payment Methods
                         </h1>
-                        <button className="w-[237px] items-center text-center h-[7vh] bg-[#0F76CA] gap-[10px]">
+                        <div className="lg:py-6 md:py-5 py-3 border-none">
+
+                        <button className="lg:w-[277px] md:w-[270px] w-[225px] border-none items-center text-[#EAF9FA] lg:text-[18px] md:text-[16px] text-[15px] text-center h-[7vh] bg-[#0F76CA] ">
                           Add New Payment Method
                         </button>
+                        </div>
                       </div>
 
                       <div className="gap-[30px]">
-                        <div className="flex justify-around gap-[20px] text-center items-center border-b-[1px] border-[#000000]">
+                        <div className="flex justify-around gap-[20px] text-center items-center border-b-[1px] border-[#A6C4C6]">
                           {Addsitems.map((item, index) => (
                             <h1
                               key={index}
-                              className="text-[#000000] text-[13px] text-center items-center flex justify-center font-popPins"
+                              className="text-[#000000] lg:text-[18px] md:text-[14px] text-[11px] text-center items-center flex justify-center font-popPins"
                             >
                               {item}
                             </h1>
                           ))}
                         </div>
                         <div
-                          className="flex justify-around gap-[10px] py-4 text-center items-center border-b-[1px] border-[#000000]"
+                          className="flex justify-around py-4 text-center items-center border-b-[1px] border-[#A6C4C6]"
                           onMouseEnter={() => handleMouseEnter("icons")}
                           onMouseLeave={handleMouseLeave}
                         >
                           {Addsitems1.map((item, index) => (
                             <h1
                               key={index}
-                              className="text-[#000000] text-center items-center flex justify-center text-[13px] font-popPins"
+                              className="text-[#000000] text-center items-center flex justify-center lg:text-[16px] md:text-[14px] text-[11px] font-popPins"
                             >
                               {item}
                             </h1>
                           ))}
                           {hoveredIndex === "icons" && (
                             <div className="flex justify-center absolute items-center text-center">
-                              <Image
-                                width={100}
-                                height={100}
-                                src={require("/public/png/delete.png")}
-                                alt=""
-                                className=""
-                              />
-                              <Image
-                                width={100}
-                                height={100}
-                                src={require("/public/png/Edit.png")}
-                                alt=""
-                                className=""
-                              />
+                              <div>
+      <div className="" onClick={handleOpenModal}>
+        <Image
+          width={25}
+          height={25}
+          src={require("/public/png/delete.png")}
+          alt=""
+          className=""
+        />
+      </div>
+      {openModal && <Modal closeModal={handleCloseModal} />}
+    </div>
+
+                              <div className="">
+                                <Image
+                                  width={25}
+                                  height={25}
+                                  src={require("/public/png/Edit.png")}
+                                  alt=""
+                                  className=""
+                                />
+
+                                {/* <Modal /> */}
+                              </div>
                             </div>
                           )}
                         </div>
 
-                        <div className="flex justify-around gap-[20px] py-7 border-b-[1px] border-[#000000]"></div>
-                        <div className="flex justify-around gap-[20px] py-7 border-b-[1px] border-[#000000]"></div>
+                        <div className="flex justify-around gap-[20px] py-7 border-b-[1px] border-[#A6C4C6]"></div>
+                        <div className="flex justify-around gap-[20px] py-7 border-b-[1px] border-[#A6C4C6]"></div>
                       </div>
                     </div>
                   </div>
@@ -248,68 +261,68 @@ export default function CheckoutPage() {
               )}
               {showContent === 2 && (
                 <div className="">
-                  <div className="flex flex-col absolute top-[0px] px-4 gap-[30px] left-0 items-center justify-center h-full">
+                  <div className="flex flex-col absolute lg:top-[21.9%] md:top-[15.9%] top-[14.1%] px-4 gap-[30px] left-0 items-center w-full justify-center h-full">
                     <div className="grid">
                       <div className="">
-                        <h1 className="text-[24px] text-[#145387] font-popPins font-bold">
+                        <h1 className="lg:text-[24px] md:text-[20px] text-[#145387] font-popPins font-bold">
                           Widget Styling
                         </h1>
-                        <p className="font-popPins text-[18px] text-[#000000]">
+                        <p className="font-popPins lg:text-[18px] md:text-[15px] text-[13px] text-[#000000]">
                           Feel free to personalize the appearance and style of
                           the widget.
                         </p>
                       </div>
                       <div className="">
-                        <h1 className="text-[24px] text-[#000000] font-popPins font-bold">
+                        <h1 className="lg:text-[24px] md:text-[20px] text-[18px] text-[#000000] font-popPins font-bold">
                           Borders
                         </h1>
                         <div>
                           <div className="">
-                            <h3 className="text-[18px] text-[#000000]">
+                            <h3 className="lg:text-[18px] md:text-[16px] text-[13px] text-[#000000]">
                               Container border-radius: X
                             </h3>
-                            <Box sx={{ width: 500 }}>
-                              <Slider
+                              <div className="lg:w-[90%] md:w-[100%] w-[100%]">
+                                <Slider
                                 defaultValue={50}
                                 aria-label="Default"
                                 valueLabelDisplay="auto"
                               />
-                            </Box>
+                              </div>
                           </div>
                           <div className="">
-                            <h3 className="text-[18px] text-[#000000]">
+                            <h3 className="lg:text-[18px] md:text-[16px] text-[13px] text-[#000000]">
                               Field border-radius: X
                             </h3>
-                            <Box sx={{ width: 500 }}>
-                              <Slider
+                              <div className="lg:w-[90%] md:w-[100%] w-[100%]">
+                                <Slider
                                 defaultValue={50}
                                 aria-label="Default"
                                 valueLabelDisplay="auto"
                               />
-                            </Box>
+                              </div>
                           </div>
                           <div className="">
-                            <h3 className="text-[18px] text-[#000000]">
+                            <h3 className="lg:text-[18px] md:text-[16px] text-[13px] text-[#000000]">
                               Button border-radius: X
                             </h3>
-                            <Box sx={{ width: 500 }}>
-                              <Slider
+                           <div className="lg:w-[90%] md:w-[100%] w-[100%]">
+                                <Slider
                                 defaultValue={50}
                                 aria-label="Default"
                                 valueLabelDisplay="auto"
                               />
-                            </Box>
+                              </div>
                           </div>
                         </div>
                       </div>
 
                       <div className="grid">
-                        <h1 className="text-[24px] text-[#444A6A]">Color</h1>
-                        <div className="flex">
+                        <h1 className="lg:text-[24px] md:text-[20px] font-bold text-[15px] text-[#444A6A]">Color</h1>
+                        <div className=" lg:flex md:flex-col flex-col py-2 gap-6">
                           <div className="grid">
                             <h3>Primary color</h3>
                             <input
-                              className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                              className="border-[1px] border-[#A6C4C6] outline-none border-none appearance-none rounded-[15px] h-[52px] lg:w-[277px] md:w-[100%] w-[100%] text-sm leading-6 text-slate-900 placeholder-slate-400 py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
                               type="text"
                               aria-label="Filter projects"
                               placeholder=""
@@ -318,11 +331,38 @@ export default function CheckoutPage() {
                           <div className="grid">
                             <h3>Background color</h3>
                             <input
-                              className="border-[1px] border-[#A6C4C6] appearance-none h-[52px] w-[290px] text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
+                              className="border-[1px] border-[#A6C4C6] border-none outline-none appearance-none rounded-[15px] h-[52px] lg:w-[277px] md:w-[100%] w-[100%] text-sm leading-6 text-slate-900 placeholder-slate-400 py-2 pl-4 ring-1 ring-slate-200 shadow-sm text-[18px] font-popPins font-bold"
                               type="text"
                               aria-label="Filter projects"
                               placeholder=""
                             />
+                          </div>
+                        </div>
+                        <div className="">
+                          <h1 className="text-[#444A6A] text-[24px] font-popPins">
+                            View type
+                          </h1>
+                          <div>
+                            <FormControl className="flex">
+                              <RadioGroup
+                                aria-labelledby="demo-controlled-radio-buttons-group"
+                                name="controlled-radio-buttons-group"
+                                className="flex"
+                              >
+                                <div className="flex">
+                                  <FormControlLabel
+                                    value="Inline"
+                                    control={<Radio />}
+                                    label="Inline"
+                                  />
+                                  <FormControlLabel
+                                    value="Drawer"
+                                    control={<Radio />}
+                                    label="Drawer"
+                                  />
+                                </div>
+                              </RadioGroup>
+                            </FormControl>
                           </div>
                         </div>
                       </div>
@@ -331,30 +371,30 @@ export default function CheckoutPage() {
                 </div>
               )}
               {showContent === 3 && (
-                <div className="flex flex-col absolute top-[2px] px-4 gap-[30px] left-0 items-center justify-center h-full">
-                  <div className="grid w-full gap-3">
-                    <h1 className="font-popPins text-[#000000] text-[24px]">
+                <div className="flex flex-col absolute lg:bottom-[0.0%] md:bottom-[3.9%] bottom-[10%] px-4 gap-[30px] left-0 items-center justify-center h-full">
+                  <div className="grid w-[100%] gap-2">
+                    <h1 className="font-popPins text-[#000000] lg:text-[24px] md:text-[20px] text-[18px]">
                       Publish to IPFS
                     </h1>
-                    <span className="font-popPins text-[18 px] text-[#000000]">
+                    <span className="font-popPins lg:text-[18px] md:text-[16px] text-[9px] text-[#000000]">
                       You’ll create a hosted link to your checkout which you can
                       embed in <br /> your CTAs.
                     </span>
 
-                    <button className="text-[#FFFFFF] bg-[#3742fa] w-[152px] h-[60px]">
+                    <button className="text-[#FFFFFF] outline-none bg-[#3742fa] w-[152px] h-[60px]">
                       Download JSON
                     </button>
                   </div>
-                  <div className="grid gap-3">
-                    <h1 className="text-[24px] text-[#000000] font-popPins font-bold">
-                      Download JSON
+                  <div className="grid gap-2">
+                     <h1 className="font-popPins text-[#000000] lg:text-[24px] md:text-[20px] text-[18px]">
+                      Publish Json
                     </h1>
-                    <span className="font-popPins text-[18px] text-[#000000]">
-                      Use this JSON configuration when embedding react or web
-                      component <br /> directly to your code
+                    <span className="font-popPins lg:text-[18px] md:text-[16px] text-[9px] text-[#000000]">
+                      You’ll create a hosted link to your checkout which you can
+                      embed in <br /> your CTAs.
                     </span>
 
-                    <button className="text-[#FFFFFF] bg-[#3742fa] w-[152px] h-[60px]">
+                    <button className="text-[#FFFFFF] outline-none bg-[#3742fa] w-[152px] h-[60px]">
                       Download JSON
                     </button>
                   </div>
@@ -362,7 +402,7 @@ export default function CheckoutPage() {
               )}
 
               {showContent === 4 && (
-                <div className="">
+                <div className="top-[10.9%]">
                   <div className="">
                     <div className="">
                       <h1>NFT Symbol</h1>
@@ -409,16 +449,6 @@ export default function CheckoutPage() {
             </div>
           </div>
         </div>
-        {/* <FormControl>
-      <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
-      <RadioGroup
-        aria-labelledby="demo-controlled-radio-buttons-group"
-        name="controlled-radio-buttons-group"
-      >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-      </RadioGroup>
-    </FormControl> */}
       </div>
     </section>
   );

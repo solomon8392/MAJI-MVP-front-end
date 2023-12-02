@@ -10,7 +10,7 @@ export default function WidgetPage() {
         <CheckoutPage />
       </div>
 
-      <div className="">
+      <div className="lg:block w-[50%] md:hidden hidden">
         <WidgetPreviewPage />
       </div>
     </div>
