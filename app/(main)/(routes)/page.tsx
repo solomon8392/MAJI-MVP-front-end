@@ -28,10 +28,10 @@ export default function Home() {
 
       <Navbar />
       <div className="">
-        <div className="flex flex-col lg:flex-row bg-[#EAF9FA] w-full  md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-around">
+        <div className="flex flex-col lg:px-[0px] md:px-5 lg:flex-row bg-[#EAF9FA] w-full  md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-around">
           <div className="">
             <h4 className="text-[#0F76CA] py-5 lg:text-[22px] md:text-[20px] text-[18px] font-popPins">
-              Accelerate revenue
+              ACCELERATE REVENUE
             </h4>
             <h1 className="lg:text-[36px] md:text-[33px] text-[18px] font-firaCode font-bold">
               Instantly boost subscriptions <br /> with cross-chain payments
@@ -42,13 +42,13 @@ export default function Home() {
             <button>
               <a
                 href=""
-                className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
+                className="bg-[#3742FA] text-[#FFFFFF] border-none font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
               >
                 Check our demo
               </a>
             </button>
           </div>
-          <div className="lg:w-[537px] md:w-[437px] lg:h-[537px] md:h-[437px] items-center flex">
+          <div className="lg:w-[527px] md:w-[427px] lg:h-[527px] md:h-[427px] items-center flex">
             <Image src={require("../../../public/png/img1.png")} alt="" />
           </div>
         </div>
@@ -57,6 +57,8 @@ export default function Home() {
             <h1 className="lg:text-[36px] md:text-[27px] text-[22px] font-firaCode text-[#072146] font-bold text-center">
               Build your subscription checkout in 3 easy steps
             </h1>
+
+            
             <div className="border-t-2 border-b-2 border-[#A6C4C6] flex flex-col lg:flex-row ">
               <div className="m-4">
                 <h1 className="lg:text-[22px] md:text-[20px] text-[15px] font-popPins text-[#145387] font-bold">
@@ -69,6 +71,7 @@ export default function Home() {
                 <div className="lg:w-[364px] lg:h-[316px] md:w-[264px] w-[223px]">
                   <Image src={require("../../../public/png/img2.png")} alt="" />
                 </div>
+
               </div>
               <div className=" border-l-2 border-[#A6C4C6]"></div>
               <div className="m-4">
@@ -96,10 +99,11 @@ export default function Home() {
                   <Image src={require("../../../public/png/img4.png")} alt="" />
                 </div>
               </div>
+          
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-between">
+          <div className="flex flex-col lg:flex-row md:flex-row items-center lg:gap-0 md:gap-0 gap-[30px] justify-between lg:py-[10vh] md:py-[10vh] py-[7vh]">
             <div className="lg:gap-0 md:gap-0 gap-[30px]">
               <h4 className="text-[#0F76CA] py-4 lg:text-[22px] md:text-[18px] text-[17px] font-popPins">
                 MAJI IS A developer-friendly integration
@@ -117,7 +121,7 @@ export default function Home() {
               <button>
                 <a
                   href=""
-                  className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
+                  className="bg-[#3742FA] border-none text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]"
                 >
                   Check our demo
                 </a>
@@ -129,7 +133,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" py-[10vh] bg-[#004481] w-full flex justify-center items-center">
+      <div className="">
+        <div className="py-[10vh] bg-[#004481] w-full flex justify-center items-center">
           <div className="rounded-3xl h-[100%] border-none w-[90%] lg:px-8 md:px-5 px-4 p-5 bg-[#043263]">
             <div className="gap-[30vh]">
               <h1 className="lg:text-[36px] md:text-[27px] text-[22px] text-[#FFFFFF] font-firaCode font-bold text-center">
@@ -141,16 +146,17 @@ export default function Home() {
                 enabling immediate access to capital.
               </p>
               <div className="flex justify-center items-center">
-                <Image src={require("../../../public/png/code2.png")} alt="" />
+                <Image src={require("../../../public/png/101.png")} alt="" />
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         <div className="lg:py-[10vh] md:py-[10vh] py-[4vh] bg-[#EAF9FA]">
           <div className="flex flex-col justify-center items-center">
             <Image
-              src={require("../../../public/png/heroA2.png")}
+              src={require("../../../public/png/102.png")}
               alt=""
               className="lg:w-[30%] md:w-[50%] w-[70%]"
             />
@@ -163,7 +169,7 @@ export default function Home() {
               </h1>
 
               <Link className="py-4" href={{ pathname: "widgetPage" }}>
-                <button className="bg-[#3742FA] text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]">
+                <button className="bg-[#3742FA] border-none text-[#FFFFFF] font-popPins justify-center flex font-bold lg:text-[18px] md:text-[13px] text-[12px] items-center rounded-full lg:w-[220px] md:w-[230px] w-[150px] h-[50px]">
                   Check our demo
                 </button>
               </Link>
